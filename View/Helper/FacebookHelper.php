@@ -543,6 +543,7 @@ class FacebookHelper extends AppHelper {
 			appId      : '$appId', // App ID
 			channelURL : '../../Vendor/channel.php', // Channel File
 			status     : true, // check login status
+			version    : 'v2.0',
 			cookie     : true, // enable cookies to allow the server to access the session
 			oauth      : true, // enable OAuth 2.0
 			xfbml      : true  // parse XFBML
