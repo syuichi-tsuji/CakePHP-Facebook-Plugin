@@ -191,7 +191,7 @@ class FacebookHelperTestCase extends CakeTestCase {
   public function testInit(){
   	$results = $this->Facebook->init();  	
   	$expected = <<<EOD
-<div id="fb-root"></div><script src="//connect.facebook.net/en_US/all.js"></script><script type="text/javascript">
+<div id="fb-root"></div><script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0"></script><script type="text/javascript">
 //<![CDATA[
 
 	window.fbAsyncInit = function() {

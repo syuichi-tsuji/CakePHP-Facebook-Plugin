@@ -610,7 +610,7 @@ class FacebookHelper extends AppHelper {
 	(function() {
 	var e = document.createElement('script'); e.async = true;
 	e.src = document.location.protocol
-	+ '//connect.facebook.net/".$this->locale."/all.js';
+	+ '//connect.facebook.net/".$this->locale."/sdk.js#xfbml=1&version=v2.0';
 	document.getElementById('fb-root').appendChild(e);
 	}());");
 			return $init;
