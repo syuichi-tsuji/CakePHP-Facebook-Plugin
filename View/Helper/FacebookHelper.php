@@ -543,7 +543,7 @@ class FacebookHelper extends AppHelper {
 			appId      : '$appId', // App ID
 			channelURL : '../../Vendor/channel.php', // Channel File
 			status     : true, // check login status
-			version    : 'v2.0',
+			version    : 'v2.3',
 			cookie     : true, // enable cookies to allow the server to access the session
 			oauth      : true, // enable OAuth 2.0
 			xfbml      : true  // parse XFBML
@@ -608,12 +608,13 @@ class FacebookHelper extends AppHelper {
 	}
 
 	// Load the SDK Asynchronously
-	(function() {
-	var e = document.createElement('script'); e.async = true;
-	e.src = document.location.protocol
-	+ '//connect.facebook.net/".$this->locale."/sdk.js#xfbml=1&version=v2.0';
-	document.getElementById('fb-root').appendChild(e);
-	}());");
+	(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = '//connect.facebook.net/".$this->locale."/sdk.js';
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));");
 			return $init;
 		} else {
 			return "<span class='error'>No Facebook configuration detected. Please add the facebook configuration file to your config folder.</span>";
